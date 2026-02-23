@@ -13,7 +13,7 @@ from sklearn.pipeline import Pipeline
 
 the_dataset = pd.read_csv("./train.csv")
 
-the_dataset["ST_interaction"] = the_dataset["ST depression"] * the_dataset["Exercise angina"]
+the_dataset["ST_interaction"] = the_dataset["ST depres sion"] * the_dataset["Exercise angina"]
 the_dataset = pd.get_dummies(the_dataset, columns=["Heart Disease"], drop_first=True)
 the_dataset.rename(columns={"Heart Disease_Presence": "Heart Disease"}, inplace=True)
 
